@@ -6,7 +6,8 @@ const Color = {
     lightishgray: '#9d9d9d',
     smoke: '#EEEEEE',
     white: '#FFFFFF',
-    connectMeColor: '#0000CD'
+    connectMeColor: '#0000CD',
+    red: 'red',
 
 }
 

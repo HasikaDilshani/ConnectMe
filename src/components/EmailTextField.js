@@ -3,17 +3,17 @@ import { TextInput, Text, StyleSheet, View } from 'react-native'
 import Color from '../utils/Colors'
 import Constants from '../const/Constants'
 
-const EmailTextField = ({term, placeHolder, OnTermChange, onValidateEmailAddress, error}) => {
+const EmailTextField = ({term, placeHolder, onTermChange, onValidateEmailAddress, error}) => {
     return (
         <View>
-            <Text style = {styles.error}> {error}</Text>
+            <Text style = {styles.ErrorText}> {error}</Text>
             <View style = {styles.TextFieldView}>
                 <TextInput
                 autoCorrect= {false}
                 style = {styles.TextField}
                 placeHolder = {placeHolder}
                 value = {term}
-                onChangeText={OnTermChange}
+                onChangeText={onTermChange}
                 onEndEditing={onValidateEmailAddress}
                 />
             </View>
@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
     },
     ErrorText: {
         fontSize: 12,
-        color: 'red',
+        color: Color.red,
         marginBottom: -5,
         marginHorizontal: 20
     }
