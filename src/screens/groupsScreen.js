@@ -23,7 +23,7 @@ function groupsScreen({navigation}) {
             ),
             headerLeft:() =>(
                 <ButtonWithBackground onPress = {()=> {
-
+                    signOutUser()
                 }}
                 image={Images.logout}
                 />
@@ -31,6 +31,18 @@ function groupsScreen({navigation}) {
         )
         })
     })
+
+    const signOutUser = async () => {
+        try{
+            await firebase.auth().signOut()
+            // navigation.reset({
+            //     index: 0,
+            //     routes: [{name: 'splashScreen'}]
+            // })
+        }catch(e){
+            console.log(e)
+        }
+    }
 
     useEffect(() => {
         getChats()
