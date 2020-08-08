@@ -12,7 +12,7 @@ import EmailTextField from '../components/EmailTextField'
 import firebase from '../firebase/Firebase'
 
 
-function signInScreen() {
+function signInScreen({navigation}) {
 
     const [email, setEmail] = useState('')
     const [password, setPassword] = useState('')
@@ -52,13 +52,21 @@ const validatePasswordField = () => {
             firebase.auth().signInWithEmailAndPassword(email, password)
             .then(user => {
                 setIsLoading(false)
-                Alert.alert('Logged In')
+                navigation.reset({
+                    index: 0,
+                    routes: [{name: 'Groups Screen'}]
+                })
+                //Alert.alert('Logged In')
         
             }).catch((error) => {
                 firebase.auth().createUserWithEmailAndPassword(email, password)
                 .then(user => {
                     setIsLoading(false)
-                    Alert.alert('Create A new user')
+                    //Alert.alert('Create A new user')
+                    navigation.reset({
+                        index: 0,
+                        routes: [{name: 'Groups Screen'}]
+                    })
                 })
                 .catch((error) => {
                     setIsLoading(false)
