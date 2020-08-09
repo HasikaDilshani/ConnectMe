@@ -108,6 +108,12 @@ const validatePasswordField = () => {
 
                     <Button title = {Strings.Join} onPress = {performAuth} isLoading = {isLoading} />
 
+                    <Text 
+                        style={styles.loginText}
+                        onPress={() => {navigation.navigate('signUpScreen')}}>
+                        Don't have account? Click here to signup
+                    </Text>  
+
                     </SafeAreaView>
                 </View>
             </KeyboardAvoidingView>
@@ -126,7 +132,12 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: Color.white
+        backgroundColor: Color.black
+    },
+    loginText: {
+        color: '#3740FE',
+        marginTop: 25,
+        textAlign: 'center'
     }
 })
 

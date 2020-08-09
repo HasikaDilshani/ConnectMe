@@ -4,6 +4,7 @@ import Color from '../utils/Colors'
 import Images from '../const/Images'
 import Constants from '../const/Constants'
 import firebase from '../firebase/Firebase'
+//import LottieView from 'lottie-react-native'
 
 function splashScreen({navigation}){
     useEffect(()=> {
@@ -30,17 +31,28 @@ function splashScreen({navigation}){
             })
 
         
-    },1000)
+    },4000)
     }
 
 return (
     <View style={styles.constainer}>
-        <Image style={styles.logo} source= {Images.logo}></Image>
+        <Text style={styles.textName}>17000696</Text>
+        <Text style={styles.textName}>H.D.P. Jayasuriya</Text>
+         <Image style={styles.logo} source= {Images.logo}></Image>
+        {/* <View style={styles.lottieView}>
+            <LottieView source = {require('../../assets/animate1.json')} autoPlay loop></LottieView>
+        </View> */}
+       
     </View>
 )
 }
 
 const styles = StyleSheet.create({
+    lottieView: {
+        width: '100%',
+        height: 0.6 * Constants.screenHeight
+
+    },
     logo: {
         alignSelf: 'center',
         margin: 0.04 * Constants.screenHeight
@@ -49,7 +61,12 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: Color.theme
+        backgroundColor: Color.black
+    },
+    textName:
+    {
+        fontSize: 30,
+        color:Color.white
     }
 
 })

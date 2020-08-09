@@ -30,8 +30,8 @@ const styles = StyleSheet.create({
     ImageIconStyle: {
         padding: 10,
         margin: 5,
-        height: 25,
-        width: 25,
+        height: 30,
+        width: 30,
         resizeMode: 'stretch'
     }
 })

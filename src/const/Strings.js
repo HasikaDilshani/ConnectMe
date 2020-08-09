@@ -12,7 +12,10 @@ const Strings = {
     JoinChat: 'Join Chat',
     JoinChatConfirmMessage: 'Are you sure you want to join this chat?',
     joinMessage: 'You Joined this group successfully!',
-    joinGroupError: 'Unable to join this group!'
+    joinGroupError: 'Unable to join this group!',
+    EnterYourName: 'Enter Your Name',
+    RegUserNameEmpty: 'User Name cannot be Empty',
+    CreateRegUser: 'Create Account'
 
 }
 

@@ -8,7 +8,7 @@ const Color = {
     white: '#FFFFFF',
     connectMeColor: '#0000CD',
     red: 'red',
-    mytheme: '#00FFFF'
+    mytheme: '#1E90FF'
 
 }
 

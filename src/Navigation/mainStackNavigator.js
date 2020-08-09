@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native'
 import { createStackNavigator } from '@react-navigation/stack'
 
 import signInScreen from '../screens/signInScreen'
+import signUpScreen from '../screens/signUpScreen'
 import groupsScreen from '../screens/groupsScreen'
 import addGroupScreen from '../screens/addGroupScreen'
 import chatScreen from '../screens/chatScreen'
@@ -22,6 +23,11 @@ function ChatFlow() {
                 <Stack.Screen
                 name="signInScreen"
                 component={signInScreen}
+                options={{ headerShown: false}}
+                />
+                <Stack.Screen
+                name="signUpScreen"
+                component={signUpScreen}
                 options={{ headerShown: false}}
                 />
                 <Stack.Screen

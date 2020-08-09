@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     },
     groupTitle: {
         color: Color.black,
-        fontSize: 14,
+        fontSize: 15,
         fontWeight: 'bold',
         marginHorizontal: 10
     },

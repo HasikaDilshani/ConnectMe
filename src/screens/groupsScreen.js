@@ -4,6 +4,7 @@ import ButtonWithBackground from '../components/ButtonWithBackground'
 import Images from '../const/Images'
 import GroupItem from '../components/GroupsItems'
 import firebase, {firestore} from '../firebase/Firebase'
+import Color from '../utils/Colors'
 // import { firestore } from 'firebase'
 
 function groupsScreen({navigation}) {
@@ -35,10 +36,10 @@ function groupsScreen({navigation}) {
     const signOutUser = async () => {
         try{
             await firebase.auth().signOut()
-            // navigation.reset({
-            //     index: 0,
-            //     routes: [{name: 'splashScreen'}]
-            // })
+            navigation.reset({
+                index: 0,
+                routes: [{name: 'splashScreen'}]
+            })
         }catch(e){
             console.log(e)
         }
@@ -100,10 +101,10 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         alignItems: 'center',
-        backgroundColor: '#ebebeb'
+        backgroundColor: Color.white
     },
     text: {
-        color: '#101010',
+        color: Color.mytheme,
         fontSize: 24,
         fontWeight: 'bold'
     }

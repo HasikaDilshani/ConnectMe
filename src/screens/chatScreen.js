@@ -8,8 +8,9 @@ import Strings from '../const/Strings'
 import DismissKeyboard from '../components/DismissKeyboard'
 import MessageItem from '../components/MessageItem'
 import MessageFieldView from '../components/MessageFieldView'
+import Color from '../utils/Colors'
 
-function chatScreen({route, navigaation}) {
+function chatScreen({route, navigation}) {
     const [messageList, setMessageList] = useState([])
     const [message, setMessage] = useState('')
     const [isJoined, setIsJoined] = useState(false)
@@ -165,7 +166,8 @@ const styles = StyleSheet.create({
         flexDirection: 'column',
         justifyContent: 'center',
         alignItems: 'center',
-        flex: 1
+        flex: 1,
+        backgroundColor: Color.white
         
     },
     flatList: {
