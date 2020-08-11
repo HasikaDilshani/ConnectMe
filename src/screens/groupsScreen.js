@@ -5,6 +5,8 @@ import Images from '../const/Images'
 import GroupItem from '../components/GroupsItems'
 import firebase, {firestore} from '../firebase/Firebase'
 import Color from '../utils/Colors'
+import {Item, HeaderButtons} from 'react-navigation-header-buttons';
+import Strings from '../const/Strings'
 // import { firestore } from 'firebase'
 
 function groupsScreen({navigation}) {
@@ -14,24 +16,36 @@ function groupsScreen({navigation}) {
     useLayoutEffect(()=> {
         navigation.setOptions({
             headerRight: () => (
-                <ButtonWithBackground onPress = {()=> {
-                    navigation.navigate('Add Group Screen')
 
-                }}
-                image= {Images.add}
+                <HeaderButtons HeaderButtonComponent={ButtonWithBackground}>
+                <Item
+                    image= {Images.profile}
+                    onPress={() => {
+                        navigation.navigate('Profile Screen')
+                    }}
                 />
-
+                <Item
+                    image= {Images.add}
+                    onPress={() => {
+                        navigation.navigate('Add Group Screen')
+                    }}
+                />
+            </HeaderButtons>
             ),
             headerLeft:() =>(
                 <ButtonWithBackground onPress = {()=> {
+                    Alert.alert(Strings.LogoutMsg)
                     signOutUser()
                 }}
                 image={Images.logout}
                 />
-
-        )
+            )
         })
     })
+
+    useEffect(() => {
+        getChats()
+    }, [])
 
     const signOutUser = async () => {
         try{
@@ -45,9 +59,24 @@ function groupsScreen({navigation}) {
         }
     }
 
-    useEffect(() => {
-        getChats()
-    }, [])
+    function showLogoutAlert(){
+        Alert.alert(
+            Strings.LogoutMsg,
+            [{
+                text: 'Yes', onPress: ()=> {
+                    signOutUser()
+                }
+            },{
+                text: 'No', onPress: ()=> {
+
+                }
+            }
+        ],
+        { cancelable: false }
+        )
+    }
+
+   
 
     function getChats(){
         const db = firestore

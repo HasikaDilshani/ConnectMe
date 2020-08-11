@@ -54,8 +54,9 @@ const validatePasswordField = () => {
                 setIsLoading(false)
                 navigation.reset({
                     index: 0,
-                    routes: [{name: 'Groups Screen'}]
+                    routes: [{name:'Groups Screen'}]
                 })
+               // navigation.navigate('Profile Screen')
                 //Alert.alert('Logged In')
         
             }).catch((error) => {
@@ -65,7 +66,7 @@ const validatePasswordField = () => {
                     //Alert.alert('Create A new user')
                     navigation.reset({
                         index: 0,
-                        routes: [{name: 'Groups Screen'}]
+                        routes: [{name:'Groups Screen'}]
                     })
                 })
                 .catch((error) => {

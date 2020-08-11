@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "ConnectMe",
+    "name": "17000696-H.D.P.Jayasuriya",
     "slug": "ConnectMe",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -21,6 +21,9 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "android": {
+      "package": "com.HDPJayasuriya.connectMe"
     }
   }
 }

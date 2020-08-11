@@ -15,7 +15,8 @@ const Strings = {
     joinGroupError: 'Unable to join this group!',
     EnterYourName: 'Enter Your Name',
     RegUserNameEmpty: 'User Name cannot be Empty',
-    CreateRegUser: 'Create Account'
+    CreateRegUser: 'Create Account',
+    LogoutMsg: 'You are Logging Out?'
 
 }
 

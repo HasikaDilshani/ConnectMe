@@ -56,7 +56,7 @@ function signUpScreen({navigation}){
         }).then(function (docRef){
             setIsLoading(false)
             console.log('Document written with ID:', regUsersRef.id)
-            navigation.navigate('signInScreen')
+            navigation.navigate('Groups Screen')
             // addMembersOfChatToFirebase(groupsRef.id, userID)
         }).catch(function(error){
             Alert.alert(error.message)

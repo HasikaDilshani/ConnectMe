@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
         fontWeight: 'bold'
     },
     message: {
-        color: Color.connectMeColor,
+        color: Color.white,
         fontSize: 14,
     }
 })

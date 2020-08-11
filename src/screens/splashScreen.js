@@ -36,8 +36,8 @@ function splashScreen({navigation}){
 
 return (
     <View style={styles.constainer}>
-        <Text style={styles.textName}>17000696</Text>
-        <Text style={styles.textName}>H.D.P. Jayasuriya</Text>
+        {/* <Text style={styles.textName}>17000696</Text>
+        <Text style={styles.textName}>H.D.P. Jayasuriya</Text> */}
          <Image style={styles.logo} source= {Images.logo}></Image>
         {/* <View style={styles.lottieView}>
             <LottieView source = {require('../../assets/animate1.json')} autoPlay loop></LottieView>

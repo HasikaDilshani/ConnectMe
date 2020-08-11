@@ -4,6 +4,7 @@ import { createStackNavigator } from '@react-navigation/stack'
 
 import signInScreen from '../screens/signInScreen'
 import signUpScreen from '../screens/signUpScreen'
+import profileScreen from '../screens/profileScreen'
 import groupsScreen from '../screens/groupsScreen'
 import addGroupScreen from '../screens/addGroupScreen'
 import chatScreen from '../screens/chatScreen'
@@ -29,6 +30,11 @@ function ChatFlow() {
                 name="signUpScreen"
                 component={signUpScreen}
                 options={{ headerShown: false}}
+                />
+                <Stack.Screen
+                name="Profile Screen"
+                component={profileScreen}
+                options={{ title: "Profile"}}
                 />
                 <Stack.Screen
                 name="Groups Screen"
